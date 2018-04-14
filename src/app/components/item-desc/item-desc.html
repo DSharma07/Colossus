@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="small-12 large-8 columns">
+
+      <div class="product-container"  *ngIf="productDetail !=null">
+          <div class="row">
+            <div class="medium-3 columns text-center">
+              <img src={{productDetail.image}}
+                   class="product_image"/>
+            </div>
+            <div class="medium-9 columns">
+              <h4>
+                <span class="text--bold js-product-name">{{productDetail.label}}</span>
+                <small class="text--bold product_price js-product-desc">{{productDetail.cost | currency:'GBP':true}}</small>
+              </h4>
+              <p class="js-product-desc">{{productDetail.ref}}</p>
+              <p class="js-product-desc">Brand : {{productDetail.brand}}</p>
+              <p class="js-product-desc">Model : {{productDetail.model}}</p>
+              <p class="js-product-desc">Description : {{productDetail.description}}</p>
+              <p class="js-product-desc">Available : {{productDetail.items_available}}</p>
+             </div>
+          </div>
+        </div>
+  </div>
+</div>
